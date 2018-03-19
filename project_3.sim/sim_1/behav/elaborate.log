@@ -14,6 +14,7 @@ Compiling module xil_defaultlib.adder(WIDTH=9)
 Compiling module xil_defaultlib.flopr(WIDTH=9)
 Compiling module xil_defaultlib.mux2(WIDTH=9)
 Compiling module xil_defaultlib.instructionmemory
+Compiling module xil_defaultlib.IdExReg
 Compiling module xil_defaultlib.RegFile
 Compiling module xil_defaultlib.mux2
 Compiling module xil_defaultlib.imm_Gen

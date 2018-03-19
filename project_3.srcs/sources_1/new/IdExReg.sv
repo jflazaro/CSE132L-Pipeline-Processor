@@ -28,44 +28,41 @@ module IdExReg #(
     )(
     input logic clk,
     
-    input logic ALUSrc, MemtoReg, RegWrite, Branch,
+    input logic ALUSrc, MemtoReg, RegWrite,// Branch,
     input logic [1:0] MemWrite, ALUOp,
     input logic [2:0] MemRead,
     input logic [PC_W-1:0] PC_IFID, PCPlus4_IFID,
-    input logic [DATA_W-1:0] RD1, RD2, ExtImm,
-//    input logic [2:0] Funct3_IFID,
-//    input logic [RF_ADDRESS-1:0] RD_IFID, RS1_IFID, RS2_IFID,
-    input logic [INS_W-1:0] Instr,
+    input logic [DATA_W-1:0] Reg1, Reg2, ExtImm,
+    input logic [2:0] Funct3_IFID,
+    input logic [RF_ADDRESS-1:0] RDest_IFID, RS1_IFID, RS2_IFID,
     input logic [3:0] ALU_CC,
     
-    output logic ALUSrc_Out, MemtoReg_Out, RegWrite_Out, Branch_Out,
+    output logic ALUSrc_Out, MemtoReg_Out, RegWrite_Out, //Branch_Out,
     output logic [1:0] MemWrite_Out, ALUOp_Out,
     output logic [2:0] MemRead_Out,
-    output logic [PC_W-1:0] PC_IFID_Out, PCPlus4_IFID_Out,
-    output logic [DATA_W-1:0] RD1_Out, RD2_Out, ExtImm_Out,
-//    output logic [2:0] Funct3_IFID_Out,
-//    output logic [RF_ADDRESS-1:0] RD_IFID_Out, RS1_IFID_Out, RS2_IFID_Out,
-    output logic [INS_W-1:0] Instr_Out,
+    output logic [PC_W-1:0] PC_IDEX_Out, PCPlus4_IDEX_Out,
+    output logic [DATA_W-1:0] Reg1_Out, Reg2_Out, ExtImm_Out,
+    output logic [2:0] Funct3_IDEX_Out,
+    output logic [RF_ADDRESS-1:0] RDest_IDEX_Out, RS1_IDEX_Out, RS2_IDEX_Out,
     output logic [3:0] ALU_CC_Out
     );
 
 assign ALUSrc_Out = ALUSrc;
 assign MemtoReg_Out = MemtoReg;
 assign RegWrite_Out = RegWrite;
-assign Branch_Out = Branch;
+//assign Branch_Out = Branch;
 assign MemWrite_Out = MemWrite;
 assign ALUOp_Out = ALUOp;
 assign MemRead_Out = MemRead;
-assign PC_IFID_Out = PC_IFID;
-assign PCPlus4_IFID_Out = PCPlus4_IFID;
-assign RD1_Out = RD1;
-assign RD2_Out = RD2;
+assign PC_IDEX_Out = PC_IFID;
+assign PCPlus4_IDEX_Out = PCPlus4_IFID;
+assign Reg1_Out = Reg1;
+assign Reg2_Out = Reg2;
 assign ExtImm_Out = ExtImm;
-//assign Funct3_IFID_Out = Funct3_IFID;
-//assign RD_IFID_Out = RD_IFID;
-//assign RS1_IFID_Out = RS1_IFID;
-//assign RS2_IFID_Out = RS2_IFID;
-assign Instr_Out = Instr;
+assign Funct3_IDEX_Out = Funct3_IFID;
+assign RDest_IDEX_Out = RDest_IFID;
+assign RS1_IDEX_Out = RS1_IFID;
+assign RS2_IDEX_Out = RS2_IFID;
 assign ALU_CC_Out = ALU_CC;
 
 endmodule

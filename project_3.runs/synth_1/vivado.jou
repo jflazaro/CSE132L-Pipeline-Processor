@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Feb 23 15:03:27 2018
+# Process ID: 1192
+# Current directory: C:/Users/joshu/OneDrive/Documents/Winter 2018/CSE 132L/project_3/project_3.runs/synth_1
+# Command line: vivado.exe -log riscv.vds -mode batch -messageDb vivado.pb -notrace -source riscv.tcl
+# Log file: C:/Users/joshu/OneDrive/Documents/Winter 2018/CSE 132L/project_3/project_3.runs/synth_1/riscv.vds
+# Journal file: C:/Users/joshu/OneDrive/Documents/Winter 2018/CSE 132L/project_3/project_3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source riscv.tcl -notrace

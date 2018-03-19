@@ -1,5 +1,6 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  "../../../project_3.srcs/sources_1/imports/design/pipeline_pkg.sv"
+sv xil_defaultlib  "../../../project_3.srcs/sources_1/new/ExMemReg.sv"
 sv xil_defaultlib  "../../../project_3.srcs/sources_1/imports/lab-2/design/RegFile.sv"
 sv xil_defaultlib  "../../../project_3.srcs/sources_1/new/IdExReg.sv"
 sv xil_defaultlib  "../../../project_3.srcs/sources_1/imports/lab-2/design/adder.sv"

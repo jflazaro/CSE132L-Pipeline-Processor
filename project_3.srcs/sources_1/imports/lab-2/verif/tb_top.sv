@@ -5,6 +5,15 @@ module tb_top;
 //clock and reset signal declaration
   logic tb_clk, reset;
   logic [31:0] tb_WB_Data/*, tb_ALU_Result, tb_Reg1, tb_Reg2*/;
+  logic [3:0] tb_ALU_CC;
+  logic [8:0] tb_PC_IDEX_Out;
+  logic [31:0] tb_Reg1_IDEX_Out;
+  logic [31:0] tb_SrcB;
+  logic [31:0] tb_ALUResult;
+  logic [4:0] tb_RDest_MW_Out;
+  logic [31:0] tb_Result_inter;
+  logic [31:0] tb_ALUResult_EXM_Out;
+  logic [31:0] tb_ALUResult_MW_Out;
   /*logic tb_Zero;
   logic [2:0] tb_Mem_Read;
   logic [1:0] tb_Mem_Write;
@@ -27,9 +36,17 @@ module tb_top;
   riscv riscV(
       .clk(tb_clk),
       .reset(reset),
-      .WB_Data(tb_WB_Data)
+      .WB_Data(tb_WB_Data),
+      .ALU_CC(tb_ALU_CC),
+      .PC_IDEX_Out(tb_PC_IDEX_Out),
+      .Reg1_IDEX_Out(tb_Reg1_IDEX_Out),
+      .SrcB(tb_SrcB),
+      .ALUResult(tb_ALUResult),
+      .RDest_MW_Out(tb_RDest_MW_Out),
+      .Result_inter(tb_Result_inter),
+      .ALUResult_EXM_Out(tb_ALUResult_EXM_Out),
+      .ALUResult_MW_Out(tb_ALUResult_MW_Out)
       /*
-      .ALU_Result(tb_ALU_Result),
       .Zero(tb_Zero),
       .MemRead(tb_Mem_Read),
       .MemWrite(tb_Mem_Write),

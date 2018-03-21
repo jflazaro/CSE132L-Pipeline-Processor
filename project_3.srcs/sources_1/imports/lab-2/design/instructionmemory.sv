@@ -63,7 +63,26 @@ assign Inst_mem[13]  = 32'h00d00093;//      addi r1,r0, 1           ALUResult = 
 //assign Inst_mem[16]   = 32'h01000093;//      addi r1,r0, 13           ALUResult = h10 = r1
 */
 
-  //// Lab 2 Official Instructions ////   
+
+  //// Pipeline Tests ////
+assign Inst_mem[0]   = 32'h00007033;//      and  r0,r0,r0           ALUResult = h0 = r0          
+assign Inst_mem[1]   = 32'h00100093;//      addi r1,r0, 1           ALUResult = h1 = r1
+assign Inst_mem[2]   = 32'h00200113;//      addi r2,r0, 2           ALUResult = h2 = r2
+assign Inst_mem[3]   = 32'h00007033;//      and  r0,r0,r0           ALUResult = h0 = r0
+assign Inst_mem[4]   = 32'h00308193;//      addi r3,r1, 3           ALUResult = h4 = r3
+assign Inst_mem[5]   = 32'h00408213;//      addi r4,r1, 4           ALUResult = h5 = r4
+assign Inst_mem[6]   = 32'h00510293;//      addi r5,r2, 5           ALUResult = h7 = r5
+assign Inst_mem[7]   = 32'h00610313;//      addi r6,r2, 6           ALUResult = h8 = r6
+assign Inst_mem[8]   = 32'h00718393;//      addi r7,r3, 7           ALUResult = hB = r7
+assign Inst_mem[9]   = 32'h00208433;//      add  r8,r1,r2           ALUResult = h3 = r8
+assign Inst_mem[10]   = 32'h00007033;//      and  r0,r0,r0           ALUResult = h0 = r0
+assign Inst_mem[11]   = 32'h00007033;//      and  r0,r0,r0           ALUResult = h0 = r0
+assign Inst_mem[12]   = 32'h404404b3;//      sub  r9,r8,r4           ALUResult = hfffffffe = -2 = r9
+assign Inst_mem[13]  = 32'h00317533;//      and r10 = r2 & r3       ALUResult = h0 = r10
+assign Inst_mem[14]  = 32'h0041e5b3;//      or  r11 = r3 | r4       ALUResult = h5 = r11
+
+
+/*  //// Lab 2 Official Instructions ////   
 assign Inst_mem[0]   = 32'h00007033;//      and  r0,r0,r0           ALUResult = h0 = r0          
 assign Inst_mem[1]   = 32'h00100093;//      addi r1,r0, 1           ALUResult = h1 = r1
 assign Inst_mem[2]   = 32'h00200113;//      addi r2,r0, 2           ALUResult = h2 = r2
@@ -138,7 +157,7 @@ assign Inst_mem[54]  = 32'h02802703;//     lw 40(r0) -> r14           ALUResult 
 
 assign Inst_mem[55]  = 32'h02d01423; //    sh r13 ->40(r0)            ALUResult = h28  
 assign Inst_mem[56]  = 32'h02802703;//     lw 40(r0) -> r13           ALUResult = 000002f0  = r13
-
+*/
 
 /* //// Testing Addition ////
 assign Inst_mem[0]  = 32'h00007033;//  0000000 00000 00000 111 00000 011 0011;     and r0,r0,r0    

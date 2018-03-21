@@ -34,14 +34,14 @@ module IfIdReg #(
     output logic [INS_W-1:0] Instr_Next
     );
 
-assign PC_Next = PC;
-assign PCPlus4_Next = PCPlus4;
-assign Instr_Next = Instr;
+//assign PC_Next = PC;
+//assign PCPlus4_Next = PCPlus4;
+//assign Instr_Next = Instr;
 
-//always @(posedge clk) begin
-//    PC_Next <= PC;
-//    PCPlus4_Next <= PCPlus4;
-//    Instr_Next <= Instr;
-//end
+always @(posedge clk) begin
+    PC_Next <= PC;
+    PCPlus4_Next <= PCPlus4;
+    Instr_Next <= Instr;
+end
   
 endmodule

@@ -9,7 +9,8 @@ module datamemory#(
     input logic [1:0] MemWrite , // Comes from control unit
     input logic [ DM_ADDRESS -1:0] a , // Read / Write address - 9 LSB bits of the ALU output
     input logic [ DATA_W -1:0] wd , // Write Data
-    output logic [ DATA_W -1:0] rd // Read Data
+    output logic [ DATA_W -1:0] rd  // Read Data
+    //output logic [DATA_W-1:0] mem [(2**DM_ADDRESS)-1:0]
     );
     
     logic [DATA_W-1:0] mem [(2**DM_ADDRESS)-1:0];

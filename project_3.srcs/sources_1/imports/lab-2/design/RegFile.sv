@@ -19,6 +19,7 @@ module RegFile#(
    // Outputs
    output logic [DATA_WIDTH-1:0] rg_rd_data1, //content of reg_file[rg_rd_addr1] is loaded into
    output logic [DATA_WIDTH-1:0] rg_rd_data2 //content of reg_file[rg_rd_addr2] is loaded into
+   //output logic [DATA_WIDTH-1:0] register_file [NUM_REGS-1:0]
    );
 
 

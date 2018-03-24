@@ -30,18 +30,22 @@ module ExMemReg #(
     input logic MemtoReg, RegWrite,
     input logic [2:0] MemRead,
     input logic [1:0] MemWrite,
-    input logic [DATA_W-1:0] Zero, ALUResult, ALUResult_Inter, Reg2, 
+    input logic Zero, 
+    input logic [DATA_W-1:0] ALUResult, ALUResult_Inter, Reg2, 
     input logic [RF_ADDRESS-1:0] RDest,
     input logic [PC_W-1:0] PC, PCPlus4,
     input logic [6:0] opcode,
+    input logic [DATA_W-1:0] ExtImm_IDEX,
     
     output logic MemtoReg_EXM_Out, RegWrite_EXM_Out,
     output logic [2:0] MemRead_EXM_Out,
     output logic [1:0] MemWrite_EXM_Out,
-    output logic [DATA_W-1:0] Zero_EXM_Out, ALUResult_EXM_Out, ALUResult_Inter_EXM_Out, Reg2_EXM_Out, 
+    output logic Zero_EXM_Out,
+    output logic [DATA_W-1:0] ALUResult_EXM_Out, ALUResult_Inter_EXM_Out, Reg2_EXM_Out, 
     output logic [RF_ADDRESS-1:0] RDest_EXM_Out,
     output logic [PC_W-1:0] PC_EXM_Out, PCPlus4_EXM_Out,
-    output logic [6:0] opcode_EXM_Out
+    output logic [6:0] opcode_EXM_Out,
+    output logic [DATA_W-1:0] ExtImm_EXM_Out
     );
 
 always @(posedge clk) begin
@@ -57,6 +61,7 @@ always @(posedge clk) begin
     PC_EXM_Out <= PC;
     PCPlus4_EXM_Out <= PCPlus4;
     opcode_EXM_Out <= opcode;
+    ExtImm_EXM_Out <= ExtImm_IDEX;
 end
 
 //assign MemtoReg_EXM_Out = MemtoReg;

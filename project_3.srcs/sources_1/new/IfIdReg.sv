@@ -25,7 +25,7 @@ module IfIdReg #(
     parameter PC_W = 9, // Program Counter
     parameter INS_W = 32 // Instruction Width
     )(
-    input logic clk,
+    input logic hazard, clk,
     
     input logic [PC_W-1:0] PC, PCPlus4,
     input logic [INS_W-1:0] Instr,
@@ -39,9 +39,11 @@ module IfIdReg #(
 //assign Instr_Next = Instr;
 
 always @(posedge clk) begin
-    PC_Next <= PC;
-    PCPlus4_Next <= PCPlus4;
-    Instr_Next <= Instr;
+    if (hazard == 0) begin
+        PC_Next <= PC;
+        PCPlus4_Next <= PCPlus4;
+        Instr_Next <= Instr;
+    end
 end
   
 endmodule
